@@ -35,7 +35,7 @@ def make_withdrawal(bank_account, type, amount):
         return bank_account[type]
     else:
         #Not enough money
-        print("Sorry, insufficient funds. By withdrawing $" + str(amount) + " you will have a negative balance.")
+        print("\nSorry, insufficient funds. By withdrawing $" + str(amount) + " you will have a negative balance.")
 
 
 def account_summary(bank_account):
@@ -68,12 +68,12 @@ while running:
         elif trans_type == "Withdrawal":
             make_withdrawal(my_account, trans_acc, trans_amt)
         else:
-            print("Sorry, this is an invalid transaction.")
+            print("\nSorry, this is an invalid transaction.")
     else:
-        print("Sorry, this account type does not exist.")
+        print("\nSorry, this account type does not exist.")
 
     #Check if user wants to transact again
-    trans_again = input("\nWould you like to make another transaction (y/n): ").lower().strip()
+    trans_again = input("Would you like to make another transaction (y/n): ").lower().strip()
     if trans_again != "y":
         print("Thank you. Have a great day!")
         running = False
